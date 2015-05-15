@@ -71,5 +71,3 @@ To make my URL as short as possible I started off by using numbers 1-9 and lette
 2. Change the `HOST_NAME` to something shorteer.
 
 3. Use javascript and AJAX so that when there is an error thrown the page does not reload, as well as on the top100 page when a link is clicked the page automatically updates the amount of times the site has been visited, instead of needing to reload the top100 page.
-
-<tt>rake doc:app</tt>.

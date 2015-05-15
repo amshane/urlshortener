@@ -13,6 +13,8 @@
 
 ActiveRecord::Schema.define(version: 20150511204341) do
 
+	enable_extension "plpgsql"
+
   create_table "urls", force: :cascade do |t|
     t.text     "original_url"
     t.string   "custom_url"

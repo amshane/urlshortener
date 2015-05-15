@@ -11,7 +11,7 @@ class Url < ActiveRecord::Base
 								:message => "Your URL is not valid, only HTTP and HTTPS links allowed."
 							}
 
-	HOST_NAME = "http://shortenme.herokuapp.com"
+	HOST_NAME = "https://shortenme.herokuapp.com"
 
 	RANDOM_GENERATOR = [*'1'..'9', *'a'..'z', *'A'..'Z']
 	.shuffle.join

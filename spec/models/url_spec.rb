@@ -27,27 +27,13 @@ RSpec.describe Url, :type => :model do
   end
 
   it "has its own character set from a-z, A-Z, 1-9" do 
-    expect(CHARS).to include("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789")
+    expect(RANDOM_GENERATOR).to include("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789")
   end
 
-  describe "#encode" do
+  describe "#create_short_url" do
     it "encodes its id to the base value of the generated set" do
-      @url.update(:custom_url => @url.encode)
-      expect(@url.encode).to eq(@url.custom_url) 
-    end
-  end
-
-  describe "#decode" do 
-    it "decodes its custom url to its id" do
-      @url.update(:custom_url => @url.encode)
-      expect(@url.decode).to eq(@url.id)
-    end
-  end
-
-  describe "#update_custom_url" do
-    it "updates the custom link with the encoded value" do
-      @url.update(:custom_url => @url.encode)
-      expect(@url.custom_url).to eq(@url.encode)
+      @url.update(:custom_url => @url.create_short_url)
+      expect(@url.create_short_url).to eq(@url.create_short_url) 
     end
   end
 

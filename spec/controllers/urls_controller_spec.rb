@@ -60,7 +60,7 @@ RSpec.describe UrlsController do
   describe "GET #show" do
     before (:each) do
       @url = Url.create! valid_attributes
-      @url.update_custom_url
+      @url.update( :custom_url => @url.create_short_url)
     end
 
     context "when the params is the :id" do

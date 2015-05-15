@@ -13,6 +13,8 @@ class Url < ActiveRecord::Base
 
 	HOST_NAME = "https://shortenme.herokuapp.com"
 
+  # HOST_NAME = "https://localhost:300"
+
 	RANDOM_GENERATOR = [*'1'..'9', *'a'..'z', *'A'..'Z']
 	.shuffle.join
 	BASE = RANDOM_GENERATOR.length
